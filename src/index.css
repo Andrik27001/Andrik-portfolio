@@ -41,7 +41,7 @@
 
 .char {
   opacity: calc(0.15 + (0.85 * var(--char-progress, 0)));
-  transition: 100ms linear;
+  transition: 50ms linear;
 }
 
 /* Estilos globales básicos */
