@@ -1,4 +1,14 @@
-import type { WorkExperience } from "../types/cv";
+import type { WorkExperience, HeroContent } from "../types/cv";
+
+export const heroContent: HeroContent = {
+  greeting: "Hola, mi nombre es",
+  name: "Andrik Solís",
+  role: "Full-stack & integrator developer",
+  description:
+    "Tengo más de 4 años de experiencia construyendo interfaces de usuario modernas[cite: 1] y optimizando APIs robustas y escalables. Me apasiona estar a la vanguardia de la programación y resolver problemas complejos de extremo a extremo (end-to-end).",
+  skillsTitle: "Tecnologías del día a día:",
+  mainSkills: ["React", "TypeScript", ".NET Core", "SQL Server", "GraphQL"],
+};
 
 export const workExperiences: WorkExperience[] = [
   {

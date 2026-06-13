@@ -1,22 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Colores de Fondo (Fieles a un modo oscuro moderno) */
-  --color-bg-main: #0f172a;
-  --color-bg-surface: #1e293b;
-
+  /* Colores de Fondo */
+  --color-main: #020618;
+  --color-surface: #1e293b;
+  
   /* Colores de Texto */
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #94a3b8;
+  --color-primary: #faf7f6;
+  --color-secondary: #94a3b8;
 
-  /* Colores de Acento (Identidad tecnológica) */
-  --color-accent: #10b981;
-  --color-accent-hover: #059669;
+  /* Colores de Acento */
+  --color-accent: #9810fa;
+
+  /* Fuentes */
+  --font-funnel: 'Funnel Display', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  /* 1. Registramos las animaciones personalizadas en Tailwind v4 */
+  --animate-aurora-slow: aurora-one 20s infinite alternate ease-in-out;
+  --animate-aurora-delayed: aurora-two 25s infinite alternate ease-in-out;
+}
+
+/* 2. Definimos los movimientos fluidos con CSS tradicional usando keyframes */
+@keyframes aurora-one {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(100px, 80px) scale(1.2); }
+  100% { transform: translate(-50px, 150px) scale(0.9); }
+}
+
+@keyframes aurora-two {
+  0% { transform: translate(0px, 0px) scale(1.1); }
+  50% { transform: translate(-120px, -60px) scale(0.8); }
+  100% { transform: translate(80px, -120px) scale(1.3); }
+}
+
+.word {
+  display: inline-block;
+}
+
+.char {
+  opacity: calc(0.15 + (0.85 * var(--char-progress, 0)));
+  transition: 100ms linear;
 }
 
 /* Estilos globales básicos */
 body {
-  background-color: var(--color-bg-main);
-  color: var(--color-text-primary);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--color-main);
+  color: var(--color-primary);
+  font-family: var(--font-funnel);
+  overflow-x: hidden;
 }
