@@ -17,12 +17,14 @@
   --font-funnel: 'Funnel Display', sans-serif;
   --font-inter: 'Inter', sans-serif;
 
-  /* 1. Registramos las animaciones personalizadas en Tailwind v4 */
+  /* Box shadows */
+  --shadow-primary: rgba(7, 1, 23, 0) 0px 6px 14px, rgba(13, 2, 46, 0) 4px 10px 38px;
+
+  /* Animations */
   --animate-aurora-slow: aurora-one 20s infinite alternate ease-in-out;
   --animate-aurora-delayed: aurora-two 25s infinite alternate ease-in-out;
 }
 
-/* 2. Definimos los movimientos fluidos con CSS tradicional usando keyframes */
 @keyframes aurora-one {
   0% { transform: translate(0px, 0px) scale(1); }
   50% { transform: translate(100px, 80px) scale(1.2); }

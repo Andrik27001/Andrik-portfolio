@@ -6,7 +6,7 @@ export const Hero: React.FC = () => {
   const { greeting, name, role, mainSkills} = heroContent;
 
   return (
-    <section id="about" className="flex flex-col justify-end min-h-[50vh] animate-fade-in">
+    <section id="about" className="w-6xl mx-auto flex flex-col justify-end min-h-[50vh] animate-fade-in">
 
       {/* <div className='text-center'>
         <span className='text-[140px] font-funnel font-semibold leading-tight'>Andrik </span>
