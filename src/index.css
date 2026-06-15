@@ -11,14 +11,14 @@
   --color-secondary: #94a3b8;
 
   /* Colores de Acento */
-  --color-accent: #9810fa;
+  --color-accent: #5e2686;
 
   /* Fuentes */
   --font-funnel: 'Funnel Display', sans-serif;
   --font-inter: 'Inter', sans-serif;
 
   /* Box shadows */
-  --shadow-primary: rgba(7, 1, 23, 0) 0px 6px 14px, rgba(13, 2, 46, 0) 4px 10px 38px;
+  --shadow-primary: #393939ac 0px 6px 14px;
 
   /* Animations */
   --animate-aurora-slow: aurora-one 20s infinite alternate ease-in-out;
