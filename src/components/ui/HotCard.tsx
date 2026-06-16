@@ -1,4 +1,5 @@
 import React from "react";
+import { Pill } from "./Pill";
 
 interface HotCardProps {
   image: string;
@@ -10,7 +11,10 @@ interface HotCardProps {
 export const HotCard: React.FC<HotCardProps> = ({ image, title, number, hot }) => {
   return (
     <div className={`${hot ? 'bg-accent' : 'bg-main/20'} w-full border border-[#acacac2a] rounded-2xl p-3 backdrop-blur-md`}>
-      
+      <Pill
+        background="#fff"
+        text="Hot"
+      />
       <div 
         className="h-64 bg-cover bg-center rounded-xl mb-3 min-h-100"
         style={{ backgroundImage: `url(${image})` }}

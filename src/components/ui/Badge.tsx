@@ -6,7 +6,7 @@ interface BadgeProps {
 
 export const Badge: React.FC<BadgeProps> = ({ text }) => {
   return (
-    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-bg-surface text-accent border border-bg-surface hover:border-accent/30 transition-colors duration-200">
+    <span className="inline-flex items-center h-8 px-4 rounded-full text-md text-accent select-none border hover:bg-accent/20 transition-colors duration-200">
       {text}
     </span>
   )
