@@ -1,7 +1,7 @@
 import React from 'react';
 import { heroContent } from '../data/cvData';
 import { Badge } from '../components/ui/Badge';
-// import { Viewer } from '../components/3d/Viewer';
+import { Viewer } from '../components/3d/Viewer';
 
 export const Hero: React.FC = () => {
   const { name, role, mainSkills} = heroContent;
@@ -10,8 +10,19 @@ export const Hero: React.FC = () => {
     <section id="about" className="mx-auto flex flex-col justify-end h-[96vh]">
       <div className='flex flex-col gap-15'>
 
-        <img src="/images/net-logo.webp" alt="" className='absolute top-40 right-160 w-60 -ml-10'/>
-        <img src="/images/react-logo.png" alt="" className='absolute top-80 right-100 w-60 -ml-10'/>
+        <div className="w-180 h-180 absolute -z-1 top-12 right-30">
+        <Viewer 
+          url="/models/react-logo.glb" 
+          speed={1}
+          horizontal={1}
+          vertical={0}
+          deep={4}
+        />
+      </div>
+
+        {/* <img src="/images/net-logo.webp" alt="" className='absolute top-40 right-160 w-60 -ml-10 animate-float-bounce'/>
+        <img src="/images/react-logo.png" alt="" className='absolute top-80 right-100 w-60 -ml-10 animate-float-bounce'/>
+        <img src="/images/relational-db.png" alt="" className='absolute top-100 right-200 w-60 -ml-10 animate-float-bounce'/> */}
 
         <div className='flex justify-between'>
           <div className='flex flex-col'>

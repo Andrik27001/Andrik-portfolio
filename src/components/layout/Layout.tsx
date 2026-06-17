@@ -20,8 +20,7 @@ export const Layout: React.FC = () => {
         className="absolute inset-0 -z-1"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 30% 70%, rgba(81, 43, 212, 0.1), transparent 60%),
-            radial-gradient(circle at 70% 30%, rgba(97, 220, 251, 0.31), transparent 60%)
+            radial-gradient(circle at 80% 10%, rgba(135, 247, 255, 0.31), transparent 30%)
           `,
         }}
       />
