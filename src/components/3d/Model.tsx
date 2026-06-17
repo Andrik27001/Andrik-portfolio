@@ -14,7 +14,6 @@ export const Model: React.FC<ModelProps> = ({url, scale, speed}) => {
   const ref = useRef<any>(null)
   const [height, setHeight] = useState(1)
 
-  // Calcular tamaño real del modelo
   useEffect(() => {
     const box = new THREE.Box3().setFromObject(scene)
     const size = new THREE.Vector3()
@@ -28,7 +27,7 @@ export const Model: React.FC<ModelProps> = ({url, scale, speed}) => {
 
       // Normalizar flotación según tamaño del modelo
       const amplitude = height * 0.05 // 5% de su altura
-      ref.current.position.y = Math.sin(t * 1.5) * amplitude
+      ref.current.position.y = Math.sin(t * 2) * amplitude
     }
   })
 

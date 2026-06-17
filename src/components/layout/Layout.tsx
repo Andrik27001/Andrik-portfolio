@@ -3,29 +3,35 @@ import { Footer } from './Footer';
 import { Hero } from '../../sections/Hero';
 import { About } from '../../sections/About';
 import { Projects } from '../../sections/Projects';
+import { Header } from './Header';
 
 export const Layout: React.FC = () => {
   return (
-    <div>
+    <div className='relative'>
       <div
-        className="fixed inset-0 -z-10"
+        className="absolute inset-0 -z-1"
         style={{
-          background: `
-            radial-gradient(ellipse 110% 70% at 25% 80%, rgba(147, 51, 234, 0.12), transparent 55%),
-            radial-gradient(ellipse 130% 60% at 75% 15%, rgba(59, 130, 246, 0.10), transparent 65%),
-            radial-gradient(ellipse 80% 90% at 20% 30%, rgba(236, 72, 153, 0.14), transparent 50%),
-            radial-gradient(ellipse 100% 40% at 60% 70%, rgba(16, 185, 129, 0.08), transparent 45%),
-            #000000
-          `,
+          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.12) 1px, transparent 0)",
+          backgroundSize: "30px 30px",
         }}
       />
 
-      <main className="w-425 mx-auto px-4">
+      <div
+        className="absolute inset-0 -z-1"
+        style={{
+          backgroundImage: `
+          radial-gradient(circle at 80% 10%, #61dcfb50, transparent 30%)`,
+        }}
+      />
+      
+      <Header />
+
+      <main className="w-422.5 mx-auto">
         <Hero />
         <About />
         <Projects />
       </main>
-
+      
       <Footer />
     </div>
   );
