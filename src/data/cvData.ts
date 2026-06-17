@@ -3,7 +3,7 @@ import type { WorkExperience, HeroContent } from "../types/cv";
 export const heroContent: HeroContent = {
   greeting: "Hola, mi nombre es",
   name: "Andrik Solís",
-  role: "Full-stack & integrator engineer, over 5 years of digital experience",
+  role: "Senior Full‑Stack & Integration Engineer, over 5 years of digital experience",
   description:
     "Más de 5 años de experiencia construyendo interfaces de usuario modernas y optimizando APIs robustas y escalables. Me apasiona estar a la vanguardia de la programación y resolver problemas complejos de extremo a extremo (end-to-end).",
   skillsTitle: "Tecnologías del día a día:",

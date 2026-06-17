@@ -1,26 +1,26 @@
 import React from 'react';
 import { heroContent } from '../data/cvData';
 import { Badge } from '../components/ui/Badge';
-import { Viewer } from '../components/3d/Viewer';
+// import { Viewer } from '../components/3d/Viewer';
 
 export const Hero: React.FC = () => {
-  const { greeting, name, role, mainSkills} = heroContent;
+  const { name, role, mainSkills} = heroContent;
 
   return (
     <section id="about" className="mx-auto flex flex-col justify-end h-[96vh]">
-      <div className="w-180 h-180 absolute -z-1 top-12 right-30">
-        <Viewer 
-          url="/models/react-logo.glb" 
-          speed={1}
-          horizontal={1}
-          vertical={0}
-          deep={4}
-        />
-      </div>
-      
       <div className='flex flex-col gap-15'>
+
+        <img src="/images/net-logo.webp" alt="" className='absolute top-40 right-160 w-60 -ml-10'/>
+        <img src="/images/react-logo.png" alt="" className='absolute top-80 right-100 w-60 -ml-10'/>
+
         <div className='flex justify-between'>
-          <p className='text-[26px] w-100 font-semibold leading-tight'>{role}</p>
+          <div className='flex flex-col'>
+          <p className='text-3xl w-100 font-light leading-tight'>{role}</p>
+            {/* <div className='flex'>
+              <img src="/images/net-logo.webp" alt="" className='w-60 -ml-10'/>
+              <img src="/images/react-logo.png" alt="" className='w-60 -ml-10'/>
+            </div> */}
+          </div>
           <div className='grid grid-cols-1 place-items-end align-middle gap-3 flex-wrap max-w-[50%]'>
             {mainSkills.map(skill => {
               return (
