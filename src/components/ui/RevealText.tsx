@@ -32,7 +32,7 @@ export const RevealText: React.FC<RevealTextProps> = ({ children }) => {
   let globalCharIndex = 0;
 
   return (
-    <p ref={currentRef} className="text-3xl justify-center leading-relaxed flex flex-wrap gap-x-2">
+    <p ref={currentRef} className="text-4xl justify-center leading-relaxed flex flex-wrap gap-x-2">
       {words.map((word, wordIndex) => {
         
         const chars = word.split('');

@@ -3,8 +3,11 @@
 
 @theme {
   /* Colores de Fondo */
-  --color-main: #faf7f6;
-  --color-surface: #1e293b;
+  --color-bone: #faf7f6;
+  --color-dark-blue: #1e293b;
+  --color-light-gray: #ffffff4D;
+  --color-purple: #9f8be7;
+  --color-semi-purple: #9f8be730;
   
   /* Colores de Texto */
   --color-primary: #161616;
@@ -18,7 +21,7 @@
   --font-inter: 'Inter', sans-serif;
 
   /* Box shadows */
-  --shadow-primary: #393939ac 0px 6px 14px;
+  --shadow-purple: var(--color-semi-purple) 0 4px 8px 0;
 
   /* Animations */
   --animate-aurora-slow: aurora-one 20s infinite alternate ease-in-out;
@@ -49,7 +52,7 @@ html {
 
 /* Estilos globales básicos */
 body {
-  background-color: var(--color-main);
+  background-color: var(--color-bone);
   color: var(--color-primary);
   font-family: var(--font-funnel);
   overflow-x: hidden;
@@ -61,5 +64,5 @@ body {
 
 .char {
   opacity: calc(0.15 + (0.85 * var(--char-progress, 0)));
-  transition: 50ms linear;
+  transition: 100ms ease-in;
 }

@@ -7,7 +7,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <nav className="flex justify-between items-center w-422.5 mx-auto fixed top-0 left-0 right-0 py-10 z-10">
-        <span className={`${open ? "text-main" : "text-primary"} text-2xl font-semibold select-none`}>
+        <span className={`${open ? "text-bone" : "text-primary"} text-2xl font-semibold select-none`}>
           andrik
           <span className="text-primary text-2xl font-semibold pr-2 py-1 bg-accent rounded-full rounded-bl-none">.dev</span>
         </span>
