@@ -1,28 +1,29 @@
 import React from "react";
-
+import { Badge } from "./Badge";
 interface CardProps {
   image: string;
   title: string;
   number: number;
   hot: boolean | undefined;
+  tags: string[];
 }
 
-export const Card: React.FC<CardProps> = ({ image, title, number, hot }) => {
+export const Card: React.FC<CardProps> = ({ image, tags }) => {
   return (
-    <div className={`${hot ? 'bg-accent' : 'bg-main/20'} w-full border border-[#acacac2a] rounded-2xl p-3 backdrop-blur-md`}>
-      
-      <div 
-        className="h-64 bg-cover bg-center rounded-xl mb-3"
-        style={{ backgroundImage: `url(${image})` }}
-      />
-
-      <div className="flex justify-between items-center p-2">
-        <h3 className="text-xl font-light">{title}</h3>
-        <span className={`${hot ? 'text-white' : 'text-accent'} text-xl font-semibold`}>
-          /{number.toString().padStart(2, '0')} {/* Esto transforma el 1 en '01' para un look más tech */}
-        </span>
-      </div>
-
+    <div className="flex gap-5 items-end min-h-200 p-10 flex-1 rounded-[50px]" style={{
+      backgroundImage: `url(${image})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }}>
+      {tags.map(tag => {
+        return (
+          <Badge
+            key={tag} 
+            text="Next.js"
+            variant="white"
+          />
+        )
+      })}
     </div>
   );
 };

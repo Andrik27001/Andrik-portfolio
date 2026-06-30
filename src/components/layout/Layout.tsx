@@ -4,6 +4,8 @@ import { Hero } from '../../sections/Hero';
 import { About } from '../../sections/About';
 import { Projects } from '../../sections/Projects';
 import { Header } from './Header';
+import { Experience } from '../../sections/Experience';
+import { TechStack } from '../../sections/TechStack';
 
 export const Layout: React.FC = () => {
   return (
@@ -20,7 +22,7 @@ export const Layout: React.FC = () => {
         className="absolute inset-0 -z-1"
         style={{
           backgroundImage: `
-            radial-gradient(circle at 80% 10%, rgba(135, 247, 255, 0.31), transparent 30%)
+            radial-gradient(circle at 80% 10%, rgba(159, 139, 231, 0.30), transparent 30%)
           `,
         }}
       />
@@ -31,6 +33,8 @@ export const Layout: React.FC = () => {
         <Hero />
         <About />
         <Projects />
+        <Experience />
+        <TechStack />
       </main>
       
       <Footer />

@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
       </nav>
       <div
         className={`
-          absolute top-0 left-0 w-screen h-screen bg-primary z-0
+          fixed top-0 left-0 w-screen h-screen bg-primary z-9
           transition-all duration-300 linear
           ${open ? "opacity-100 " : "opacity-0  pointer-events-none"}
         `}
